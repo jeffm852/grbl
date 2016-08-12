@@ -88,4 +88,8 @@
   #include "defaults/defaults_simulator.h"
 #endif
 
+#ifdef DEFAULTS_JM
+  // Settings - custom JM)
+  #include "defaults/defaults_jm.h"
+#endif
 #endif
