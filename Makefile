@@ -29,7 +29,7 @@
 # FUSES ........ Parameters for avrdude to flash the fuses appropriately.
 
 DEVICE     ?= atmega328p
-CLOCK      = 16000000
+CLOCK      = 16000000  # note:  serial does not work with 8mhz setting
 PROGRAMMER ?= -c avrisp2 -P usb
 SOURCE    = main.c motion_control.c gcode.c spindle_control.c coolant_control.c serial.c \
              protocol.c stepper.c eeprom.c settings.c planner.c nuts_bolts.c limits.c \
