@@ -1,5 +1,5 @@
 /*
-  defaults_x_carve_1000mm.h - defaults settings configuration file
+  defaults_jm.h - defaults settings configuration file
   Part of Grbl
   Copyright (c) 2012-2015 Sungeun K. Jeon
   Grbl is free software: you can redistribute it and/or modify
@@ -23,20 +23,20 @@
 #ifndef defaults_h
 #define defaults_h
 
-  // Description: X-Carve 3D Carver CNC mill with three 200 step/rev motors driven by Synthetos
-  // grblShield at 24V.
-  #define MICROSTEPS_XY 8
+  // Description: 
+  // DRV8825 at 32V.
+  #define MICROSTEPS_XY 16
   #define STEP_REVS_XY 200
   #define MM_PER_REV_XY (2.0*20) // 2mm belt pitch, 20 pulley teeth
-  #define MICROSTEPS_Z 2
+  #define MICROSTEPS_Z 16
   #define STEP_REVS_Z 200
-  #define MM_PER_REV_Z 2.117 // ACME 3/8-12 Leadscrew
+  #define MM_PER_REV_Z 8 // 4 start, 2mm
   #define DEFAULT_X_STEPS_PER_MM (MICROSTEPS_XY*STEP_REVS_XY/MM_PER_REV_XY)
   #define DEFAULT_Y_STEPS_PER_MM (MICROSTEPS_XY*STEP_REVS_XY/MM_PER_REV_XY)
   #define DEFAULT_Z_STEPS_PER_MM (MICROSTEPS_Z*STEP_REVS_Z/MM_PER_REV_Z)
   #define DEFAULT_X_MAX_RATE 8000.0 // mm/min
-  #define DEFAULT_Y_MAX_RATE 8000.0 // mm/min
-  #define DEFAULT_Z_MAX_RATE 500.0 // mm/min
+  #define DEFAULT_Y_MAX_RATE 5000.0 // mm/min
+  #define DEFAULT_Z_MAX_RATE 1000.0 // mm/min
   #define DEFAULT_X_ACCELERATION (500.0*60*60) // 25*60*60 mm/min^2 = 25 mm/sec^2
   #define DEFAULT_Y_ACCELERATION (500.0*60*60) // 25*60*60 mm/min^2 = 25 mm/sec^2
   #define DEFAULT_Z_ACCELERATION (50.0*60*60) // 25*60*60 mm/min^2 = 25 mm/sec^2
